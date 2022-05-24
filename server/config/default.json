@@ -2,5 +2,6 @@
 	"serverPort": 5000,
 	"dbUrl": "mongodb+srv://azarro777:0937098144@cloud.gtpsf.mongodb.net/cloud?retryWrites=true&w=majority",
 	"secretKey": "mern-secret-key",
-	"API_URL": "http://localhost:5000/"
+	"API_URL": "http://localhost:5000/",
+	"filePath": "/home/azarro/Загрузки/Projects/FULLSTACK_apps/cloud_disk/server/files"
 }
