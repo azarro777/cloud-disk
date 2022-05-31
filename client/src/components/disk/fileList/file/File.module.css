@@ -25,6 +25,24 @@
 .file__btn {
   display: none;
 }
+
+.file__button_img {
+  width: 22px;
+  height: auto;
+}
+
+.file__plate_button_img {
+  width: 22px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.file__delete, .file__download {
+  display: none;
+}
+
 .file:hover .file__date {
   grid-column-start: 3;
 }
@@ -34,12 +52,31 @@
 .file:hover .file__download {
   grid-column-start: 5;
   display: block;
+  margin: 0 10px;
 }
+
+.file__download:hover, .file__plate_download:hover {
+  cursor: pointer;
+  background: rgba(34, 187, 3, 0.2);
+  border: 1px solid #cccc;
+  border-radius: 2px;
+}
+
+.file__delete:hover, .file__plate_delete:hover {
+  cursor: pointer;
+  background: rgba(240, 38, 3, 0.2);
+  border: 1px solid #cccc;
+  border-radius: 2px;
+}
+
 .file:hover .file__delete {
   grid-column-start: 6;
   display: block;
+  margin: 0 10px;
+  cursor: pointer;
 }
-.file-plate {
+
+.file__plate {
   width: 150px;
   height: 150px;
   cursor: pointer;
@@ -47,13 +84,13 @@
   flex-direction: column;
   align-items: center;
 }
-.file-plate__img {
-  height: 100px;
-  width: 100px;
+.file__plate_img {
+  height: 70px;
+  width: 70px;
 }
-.file-plate__btns {
+.file__plate_btns {
   display: none;
 }
-.file-plate:hover .file-plate__btns {
+.file__plate:hover .file__plate_btns {
   display: flex;
 }

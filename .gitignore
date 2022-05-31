@@ -1,2 +1,8 @@
 client/src/config.js
+client/node_modules
+
 server/config/default.json
+server/node_modules
+
+server/files
+server/static

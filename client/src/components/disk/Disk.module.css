@@ -11,7 +11,7 @@
 }
 
 .disk__black {
- cursor: pointer;
+  cursor: pointer;
 }
 
 .disk__upload_input {
@@ -29,9 +29,31 @@
   cursor: pointer;
 }
 
-.disk__select {
+.disk__inputs {
   margin-left: auto;
+  display: flex;
+  align-items: center;
 }
+
+.disk__input {
+  height: 31px;
+  padding-left: 10px;
+}
+
+.disk__select {
+  margin-left: 10px;
+  height: 31px;
+}
+
+.disk__create, 
+.disk__black, 
+.disk__upload, 
+.disk__input, 
+.disk__select {
+  border: 1px solid #566885;
+  border-radius: 4px;
+}
+
 .disk__list,
 .disk__plate {
   height: 20px;
@@ -117,28 +139,50 @@
   align-items: center;
   height: calc(100vh - 50px);
 }
-.lds-dual-ring {
+
+.lds_ripple {
   display: inline-block;
+  position: relative;
   width: 80px;
   height: 80px;
 }
-.lds-dual-ring:after {
-  content: " ";
-  display: block;
-  width: 64px;
-  height: 64px;
-  margin: 8px;
+.lds_ripple div {
+  position: absolute;
+  border: 4px solid rgb(167, 162, 162);
+  opacity: 1;
   border-radius: 50%;
-  border: 6px solid #566885;
-  border-color: #566885 transparent #566885 transparent;
-  animation: lds-dual-ring 1.2s linear infinite;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
-
-@keyframes lds-dual-ring {
+.lds_ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
   0% {
-    transform: rotate(0deg);
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
   }
   100% {
-    transform: rotate(360deg);
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
   }
 }

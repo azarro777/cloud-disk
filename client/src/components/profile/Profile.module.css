@@ -1,0 +1,40 @@
+.profile__block {
+	width: 300px;
+	height: 200px;
+	margin-top: 3rem;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.profile__delete_btn {
+	height: 34px;
+	width: 150px;
+	background-color: rgba(233, 233, 233, 0.8);
+	color: red;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.profile__delete_btn:hover {
+	color: white;
+	background-color: rgb(177, 3, 3);
+	border: 1px solid rgb(177, 3, 3);
+}
+
+.profile__upload {
+	height: 34px;
+	margin-left: 10px;
+}
+
+.profile__upload_img {
+	width: 30px;
+	height: 30px;
+}
+
+.profile__upload_input {
+	display: none;
+}
